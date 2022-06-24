@@ -2,6 +2,9 @@ package com.yuliu.demo.binarytree;
 
 import com.yuliu.bean.TreeNode;
 
+/**
+ * 给定一个二叉树根节点，请你判断这棵树是不是二叉搜索树。
+ */
 public class Solution13 {
     /**
      * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
@@ -10,21 +13,20 @@ public class Solution13 {
      * @return bool布尔型
      */
 
-    int pre = Integer.MAX_VALUE;
+    int pre = Integer.MIN_VALUE;
 
-//    public boolean isValidBST(TreeNode root) {
-
-//        if (root == null) {
-//            return true;
-//        }
-//
-//        if (!isValidBST(root.left)) {
-//            return false;
-//        }
-//
-//        boolean isRootValidBST = (root.left != null && root.left.val >= root.val) || (root.right != null && root.right.val <= root.val);
-//
-//        boolean right = isValidBST(root.right);
-//        return !isRootValidBST && left && right;
-//    }
+    //中序遍历
+    public boolean isValidBST(TreeNode root) {
+        if (root == null)
+            return true;
+        //先进入左子树
+        if (!isValidBST(root.left))
+            return false;
+        if (root.val < pre)
+            return false;
+        //更新最值
+        pre = root.val;
+        //再进入右子树
+        return isValidBST(root.right);
+    }
 }

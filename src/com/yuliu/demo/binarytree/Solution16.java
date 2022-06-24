@@ -2,6 +2,9 @@ package com.yuliu.demo.binarytree;
 
 import com.yuliu.bean.TreeNode;
 
+/**
+ * 二叉搜索树(有序的)的最近公共祖先
+ */
 public class Solution16 {
     /**
      * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可

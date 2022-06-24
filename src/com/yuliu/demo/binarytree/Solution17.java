@@ -2,6 +2,10 @@ package com.yuliu.demo.binarytree;
 
 import com.yuliu.bean.TreeNode;
 
+/**
+ * 给定一棵二叉树(保证非空)以及这棵树上的两个节点对应的val值 o1 和 o2，
+ * 请找到 o1 和 o2 的最近公共祖先节点。
+ */
 public class Solution17 {
     /**
      * @param root TreeNode类
