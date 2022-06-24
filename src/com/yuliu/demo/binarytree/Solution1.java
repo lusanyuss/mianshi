@@ -30,4 +30,25 @@ class Solution1 {
         return isPalindromeString_recursive(s.substring(start + 1).substring(0, end - 1));
     }
 
+    public static boolean isPalindromeString(String s) {
+        if (s == null) {
+            return true;
+        }
+        if (s.length() == 1) {
+            return true;
+        }
+
+        int start = 0;
+        int end = s.length() - 1;
+
+        while (start > end) {
+            if (s.charAt(start) != s.charAt(end)) {
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
+
 }

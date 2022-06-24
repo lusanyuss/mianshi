@@ -25,10 +25,11 @@ public class Solution13 {
                 cur.next = pHead2;
                 pHead2 = pHead2.next;
             }
+            cur = cur.next;
         }
         if (pHead1 != null) {
             cur.next = pHead1;
-        }else {
+        } else {
             cur.next = pHead2;
         }
         return head.next;
